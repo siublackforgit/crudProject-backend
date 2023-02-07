@@ -1,7 +1,6 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "proxy": "http://localhost:8000/",
   "scripts": {
@@ -22,5 +21,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siublackforgit/crudProject-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/siublackforgit/crudProject-backend/issues"
+  },
+  "homepage": "https://github.com/siublackforgit/crudProject-backend#readme",
+  "description": ""
 }
