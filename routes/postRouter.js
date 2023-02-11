@@ -23,7 +23,7 @@ postRouter.route("/post").get((req,res)=>{
 })
 
 postRouter.route(`/delete/:id`).delete((req,res)=>{
-    Post.findByIdAndDelete({_id:req.params.id})
+    Post.findByIdAndDelete(req.params.id)
     .then((doc)=>{console.log(doc)})
     .catch((err)=>{
         console.log(err)})
@@ -31,7 +31,7 @@ postRouter.route(`/delete/:id`).delete((req,res)=>{
 })
 
 postRouter.route(`/update/:id`).put((req,res)=>{
-    Post.findByIdAndUpdate({_id:req.params.id},{
+    Post.findByIdAndUpdate(req.params.id,{
         title:req.body.title,
         content:req.body.content
     }).then(doc=>console.log(doc))
