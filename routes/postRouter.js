@@ -31,7 +31,7 @@ postRouter.route(`/delete/:id`).delete((req,res)=>{
 })
 
 postRouter.route(`/update/:id`).put((req,res)=>{
-    Post.findByIdAndUpdate(req.params.id,{
+    Post.findByIdAndUpdate((req.params.id),{
         title:req.body.title,
         content:req.body.content
     }).then(doc=>console.log(doc))
